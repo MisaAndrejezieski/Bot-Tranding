@@ -5,7 +5,7 @@ from typing import Dict, List
 
 import numpy as np
 import pandas as pd
-from utils.logger import logger
+from utils.logger import logger  # type: ignore[reportMissingImports]
 
 from core.strategy_avancada import EstrategiaAvancada
 

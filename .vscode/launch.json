@@ -1,0 +1,55 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Paper Trading",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main_advanced.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "paper",
+                "--days",
+                "30"
+            ]
+        },
+        {
+            "name": "Python: Backtest",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main_advanced.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "backtest",
+                "--days",
+                "90",
+                "--optimize"
+            ]
+        },
+        {
+            "name": "Python: Otimizar",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main_advanced.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--mode",
+                "optimize",
+                "--days",
+                "180"
+            ]
+        },
+        {
+            "name": "Python: Relatório",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main_advanced.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--report"
+            ]
+        }
+    ]
+}

@@ -10,7 +10,9 @@
         "100"
     ],
     "editor.formatOnSave": true,
-    "editor.rulers": [100],
+    "editor.rulers": [
+        100
+    ],
     "files.exclude": {
         "**/__pycache__": true,
         "**/*.pyc": true,

@@ -1,5 +1,5 @@
 import time
-from typing import Dict
+from typing import Dict, Any
 
 # imports opcionais com fallback para evitar erros de Pylance e em ambientes
 # onde o pacote ainda não foi instalado. Esses comentários `type: ignore`
@@ -24,7 +24,8 @@ class ArbitrageScanner:
     def __init__(self, symbol: str = "BTC/USDT", spread_threshold: float = 0.5):
         self.symbol = symbol
         self.spread_threshold = spread_threshold  # porcentagem mínima para alertar
-        self.exchanges: Dict[str, ccxt.Exchange] = {}
+        # Any usado porque ccxt pode ser None/omitido; evita erro de tipo
+        self.exchanges: Dict[str, Any] = {}  # type: ignore[reportInvalidTypeForm]
         self.running = False
 
     def add_exchange(self, exchange_id: str):

@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Dict, Optional
 
-from utils.logger import logger
+from utils.logger import logger  # type: ignore[reportMissingImports]
 
 from core.exchange import ExchangeManager
 from core.strategy_avancada import EstrategiaAvancada

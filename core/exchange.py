@@ -2,8 +2,16 @@ import os
 from datetime import datetime
 from typing import Dict, Optional
 
-import ccxt
-from dotenv import load_dotenv
+try:
+    import ccxt  # type: ignore[reportMissingImports]
+except ImportError:  # pragma: no cover
+    ccxt = None  # type: ignore
+
+try:
+    from dotenv import load_dotenv  # type: ignore[reportMissingImports]
+except ImportError:  # pragma: no cover
+    def load_dotenv():  # type: ignore
+        pass
 
 load_dotenv()
 

@@ -1,9 +1,15 @@
 import time
 from typing import Dict
 
-import ccxt
+# imports opcionais com fallback para evitar erros de Pylance e em ambientes
+# onde o pacote ainda não foi instalado. Esses comentários `type: ignore`
+# silenciam avisos de importação ausente.
+try:
+    import ccxt  # type: ignore[reportMissingImports]
+except ImportError:  # pragma: no cover
+    ccxt = None  # type: ignore
 
-from utils.logger import logger
+from utils.logger import logger  # type: ignore[reportMissingImports]
 
 
 class ArbitrageScanner:

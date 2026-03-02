@@ -10,8 +10,10 @@ except ImportError:  # pragma: no cover
 try:
     from dotenv import load_dotenv  # type: ignore[reportMissingImports]
 except ImportError:  # pragma: no cover
+
     def load_dotenv():  # type: ignore
         pass
+
 
 load_dotenv()
 

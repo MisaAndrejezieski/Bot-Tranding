@@ -1,5 +1,5 @@
 import time
-from typing import Dict, Any
+from typing import Any, Dict
 
 # imports opcionais com fallback para evitar erros de Pylance e em ambientes
 # onde o pacote ainda não foi instalado. Esses comentários `type: ignore`
